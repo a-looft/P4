@@ -1,0 +1,137 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: aliceblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.5rem;
+}
+#logo {
+    max-height: 100px;
+}
+/* Apply Futura font */
+body {
+    font-family: 'Futura', sans-serif;
+}
+/* Navbar Styling */
+.custom-navbar {
+    background-color: #e2bdcb; /* Navbar background color */
+    font-family: 'Futura', sans-serif; /* Font Futura */
+    font-weight: normal; /* Normal font weight */
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+    color: black; /* Black text color for navbar links */
+    font-weight: normal; /* Normal font weight */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect for Navbar Links */
+.navbar .nav-link:hover {
+    color: whitesmoke; /* Change color on hover to match card link */
+    background-color: rgba(226, 189, 203, 0.2); /* Subtle background change on hover */
+}
+/* Card styling */
+.custom-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f8f9fa; /* Neutral background color */
+}
+/* Ensure the cards are square */
+.custom-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f8f9fa; /* Neutral background color */
+    width: 100%; /* Ensures full width inside the grid */
+    height: 0;
+    padding-bottom: 100%; /* This creates the square aspect ratio */
+}
+
+/* Card content inside the square */
+.custom-card .card-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    text-align: center;
+    width: 100%;
+}
+
+/* Background image setup */
+.custom-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: var(--card-bg); /* Dynamically set background image */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+/* Reveal background on hover */
+.custom-card:hover::before {
+    opacity: 0.25; /* Low opacity for subtle effect */
+}
+
+/* Hover animations for the card */
+.custom-card:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Center text inside the card */
+.card-title {
+    font-weight: 600; /* Slightly heavier font weight */
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-bottom: 0;
+}
+
+/* Remove link styling from the card text */
+.card-link {
+    text-decoration: none; /* Remove underline from the entire card */
+    color: black; /* Set card link color to #e2bdcb */
+    transition: color 0.3s ease;
+}
+/* Card Link Hover Effect */
+.card-link:hover {
+    color: #782544; /* Change link color to black when hovering */
+}
+
+.card-body .card-title,
+.card-body .card-text {
+    color: inherit; /* Ensure text color is not affected by link styles */
+}
+
+/* Optional: Add some hover effects for the entire card */
+.custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+}
+
+.custom-card:hover .card-body {
+    background-color: rgba(0, 86, 179, 0.1); /* Light background change on hover */
+}
+
+/* Ensure all carousel images are the same size */
+#homepageCarousel .carousel-inner img {
+    width: 100%;  /* Make the image take up the full width of the container */
+    height: 500px;  /* Set a fixed height for all images */
+    object-fit: cover;  /* Crop the image if necessary to fit the container without distortion */
+}
+
+
+
+
