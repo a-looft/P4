@@ -1,0 +1,186 @@
+/* General Layout for Member and Group Sections */
+.row.section-content {
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsive wrapping */
+    gap: 20px; /* Add spacing between items */
+    justify-content: start; /* Align content to the left */
+    margin-bottom: 40px; /* Add space between sections */
+    align-items: flex-start;
+}
+
+.section-content .col-left {
+    flex: 0 0 35%; /* Fixed width for the image box */
+    max-width: 35%;
+    background-color: #f8f9fa; /* Light background for the image box */
+    border-radius: 10px; /* Smooth corners */
+    padding: 15px; /* Add padding around content */
+    text-align: left; /* Center-align image and text */
+}
+
+.section-content .col-left img {
+    margin-bottom: 15px; /* Space below the image */
+}
+
+.section-content .col-right {
+    flex: 1; /* Remaining space for content */
+    max-width: 60%;
+}
+
+.section-content .col-right .row {
+    gap: 20px; /* Spacing between album cards */
+    justify-content: flex-start; /* Align album cards to the left */
+}
+
+/* Responsive Adjustments for Small Screens */
+@media (max-width: 768px) {
+    .row.section-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .section-content .col-left,
+    .section-content .col-right {
+        flex: 0 0 100%; /* Full-width columns */
+        max-width: 100%;
+        text-align: center; /* Center-align content */
+        margin-bottom: 20px; /* Add spacing between stacked items */
+    }
+
+    .section-content .col-right .row {
+        justify-content: center; /* Center album cards for small screens */
+    }
+    .album-card img {
+        max-height: 150px; /* Smaller covers for mobile screens */
+    }
+}
+
+/* Album Card Styles */
+.album-card {
+    flex: 1 1 calc(33.333% - 20px); /* Three albums per row with gap */
+    max-width: calc(33.333% - 20px);
+    text-align: center; /* Center-align album content */
+    margin-bottom: 20px;
+}
+
+.album-card img {
+    width: 100%; /* Ensure image fills card */
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px; /* Smooth corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.album-card h5 {
+    font-family: 'Futura PT', serif;
+    font-size: 1.25rem; /* Larger for album title */
+    margin-top: 10px;
+    color: #474a4d;
+}
+
+.album-card p {
+    font-family: 'Futura PT', serif;
+    font-size: 0.9rem;
+    color: #474a4d; /* Neutral grey */
+    margin: 5px 0;
+}
+
+/* Adjust Tracklist Alignment */
+.tracklist {
+    font-family: 'Futura PT', serif; /* Clean modern font */
+    font-size: 0.9rem;
+    color: #474a4d; /* Neutral grey */
+    text-align: left; /* Align tracklist to the left */
+    margin: 0; /* Remove extra margin */
+    padding-left: 1rem; /* Indent the list */
+}
+
+/* Table of Contents Styling */
+.toc-box {
+    background-color: #e2bdcb;
+    padding: 15px;
+    border: 2px solid #c89bab;
+    border-radius: 10px;
+    font-family: 'Futura PT', serif;
+    color: #474a4d;
+    text-align: left; /* Ensure text aligns to the left */
+    height: auto; /* Avoid stretching */
+    overflow: hidden; /* Prevent content overflow */
+    flex: 0 0 25%; /* Fixed width for ToC */
+    margin-right: 20px; /* Add space between ToC and content */
+    
+}
+
+.toc-box h5 {
+    color: #333;
+}
+
+.toc-box ul {
+    list-style-type: none;
+    padding-left: 15px;
+    margin: 0;
+}
+
+.toc-box a {
+    text-decoration: none;
+    color: #474a4d; /* Updated color for subunit links */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.toc-box a:hover {
+    color: whitesmoke;
+    background-color: rgba(71, 74, 77, 0.1);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+/* Content Area Styling */
+.content-area {
+    font-family: 'Futura PT', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    text-align: left; /* Ensure text aligns to the left */
+    margin: 0; /* Remove auto centering */
+    max-width: 100%; /* Allow full-width content */
+    width: calc(100% - 250px); /* Adjust width to account for ToC */
+    padding: 0 15px; /* Add spacing from ToC */
+    flex: 1;
+}
+
+/* Heading Styles for Content Area */
+.content-area h2 {
+    font-family: 'Futura PT', sans-serif; /* Use Futura PT */
+    font-size: 2.5rem; /* Larger for top-level headings */
+    color: #782544; /* Match site color scheme */
+    margin-top: 30px; /* Add space above */
+    margin-bottom: 15px; /* Add space below */
+    border-bottom: 2px solid #e2bdcb; /* Add visual separation */
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+/* Member Name Styling */
+.member-name {
+    font-size: 1.8rem; /* Larger font size for member names */
+    font-family: 'Ting Tong', cursive;
+    text-align: center; /* Center-align the member name */
+    margin-bottom: 15px; /* Add space below the name */
+}
+
+/* Page Title Styling */
+.page-title {
+    font-family: 'Ting Tong', cursive;
+    font-size: 3rem; /* Adjust size as needed */
+    color: #000000; /* Match the color theme */
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    letter-spacing: 2px; /* Add spacing for better readability */
+}
+
+.member-info li strong {
+    color:#333;
+}
+
+.member-info li a {
+    color:#c89bab;
+}

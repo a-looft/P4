@@ -1,0 +1,64 @@
+.timeline {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 40px;
+    border-left: 8px solid transparent; /* Make border left visible */
+    border-image: linear-gradient(to bottom, 
+        #DE3373 , #FCCA28 , #08A953 , #F5712A , 
+        #F59EAF , #EE1B3E , #1E76B8 , #7C2E87 ,
+        #7A0434 , #F98F81 , #37BA9B , #C0C2C2 
+    ); /* 12-color gradient */
+    border-image-slice: 1; /* Ensure gradient fills the border */
+    display: inline-block; /* Makes the timeline content behave like an inline element for centering */
+    margin-top: 20px; /* Add some spacing below the h1 */
+}
+
+.timeline-event {
+    position: relative; /* Required for dots to align correctly */
+    margin-bottom: 30px;
+    padding-left: 20px; /* Spacing for event text */
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    left: -15px; /* Adjust position of the dots relative to the border */
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-color: #e2bdcb;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.timeline-date {
+    font-family: 'Futura PT', sans-serif;
+    font-size: 1rem;
+    color: #474a4d; /* Neutral grey */
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left; /* Align date text left */
+}
+
+.timeline-content h5 {
+    font-family: 'Futura PT', serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000; /* Black for better contrast */
+    margin: 0;
+    text-align: left; /* Ensure header text aligns left */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .timeline {
+        width: 90%; /* Make it fit smaller screens */
+        padding-left: 20px;
+    }
+
+    .timeline-event::before {
+        left: -15px; /* Adjust dot positioning for smaller screens */
+        width: 12px;
+        height: 12px;
+    }
+}
