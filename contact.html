@@ -22,8 +22,11 @@
             </a>
         </div>
         
-        <!-- Nav Bar -->
+        <!-- Nav Bar --> <!--nav bar gets messed up in smaller viewport, need to fix-->
         <nav class="navbar navbar-expand-md navbar-light custom-navbar">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-2">
@@ -32,8 +35,16 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="history.html">History</a>
                     </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="profiles.html">Profiles</a>
+                     <!-- Profiles Dropdown -->
+                    <li class="nav-item dropdown mx-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="profilesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Profiles
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="profilesDropdown">
+                            <li><a class="dropdown-item" href="profiles.html#members">Members</a></li>
+                            <li><a class="dropdown-item" href="profiles.html#subunits">Sub-units</a></li>
+                            <li><a class="dropdown-item" href="profiles.html#redebuts">Re-debuts</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="timeline.html">Timeline</a>
