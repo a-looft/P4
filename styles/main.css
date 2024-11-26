@@ -115,6 +115,11 @@ body {
     font-family: 'Didot', serif;
 }
 
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown on hover */
+    animation: fadeIn 0.3s ease-in-out; /* Optional: Add fade-in animation */
+}
+
 .navbar .nav-link {
     color: black;
     font-weight: normal;
