@@ -71,14 +71,14 @@
 }
 
 .album-card h5 {
-    font-family: 'Didot', serif;
+    font-family: 'Futura PT', serif;
     font-size: 1.25rem; /* Larger for album title */
     margin-top: 10px;
     color: #474a4d;
 }
 
 .album-card p {
-    font-family: 'Didot', serif;
+    font-family: 'Futura PT', serif;
     font-size: 0.9rem;
     color: #474a4d; /* Neutral grey */
     margin: 5px 0;
@@ -86,7 +86,7 @@
 
 /* Adjust Tracklist Alignment */
 .tracklist {
-    font-family: 'Didot', serif; /* Clean modern font */
+    font-family: 'Futura PT', serif; /* Clean modern font */
     font-size: 0.9rem;
     color: #474a4d; /* Neutral grey */
     text-align: left; /* Align tracklist to the left */
@@ -100,7 +100,7 @@
     padding: 15px;
     border: 2px solid #c89bab;
     border-radius: 10px;
-    font-family: 'Didot', serif;
+    font-family: 'Futura PT', serif;
     color: #474a4d;
     text-align: left; /* Ensure text aligns to the left */
     height: auto; /* Avoid stretching */

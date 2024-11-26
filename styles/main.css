@@ -1,21 +1,21 @@
-/*didot fonts*/
+/*Futura PT fonts*/
 @font-face {
-    font-family: 'Didot', serif;
-    src: url('../fonts/Didot.otf') format('opentype');
+    font-family: 'Futura PT', serif;
+    src: url('../fonts/Futura PT.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Didot', serif;
-    src: url('../fonts/Didot Bold.otf') format('opentype');
+    font-family: 'Futura PT', serif;
+    src: url('../fonts/Futura PT Bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Didot', serif;
-    src: url('../fonts/Didot Italic.otf') format('opentype');
+    font-family: 'Futura PT', serif;
+    src: url('../fonts/Futura PT Italic.otf') format('opentype');
     font-weight: 400;
     font-style: italic;
 }
@@ -86,7 +86,7 @@
 /* Body Styles */
 body {
     font-family: 'Futura', sans-serif;
-    background-color: #ecf4f8;
+    background-color: #e2e2e2;
     margin: 0;
     padding: 0;
 }
@@ -112,13 +112,14 @@ body {
 /* Navbar */
 .custom-navbar {
     background-color: #e2bdcb;
-    font-family: 'Didot', serif;
+    font-family: 'Futura PT', serif;
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
     display: block; /* Show dropdown on hover */
     animation: fadeIn 0.3s ease-in-out; /* Optional: Add fade-in animation */
 }
+
 
 .navbar .nav-link {
     color: black;
@@ -173,7 +174,7 @@ h1.text-center {
     text-align: center; /* Center-align text */
     width: 90%; /* Ensure text doesn't overflow */
     padding: 10px; /* Add consistent padding */
-    font-family: 'Didot', serif; /* Apply Didot font */
+    font-family: 'Futura PT', sans-serif; /* Apply Futura PT font */
     font-size: 1rem; /* Consistent font size */
     color: #474a4d; /* Neutral grey color */
     font-weight: 400; /* Regular weight for better readability */
