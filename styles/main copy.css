@@ -1,0 +1,547 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: aliceblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.5rem;
+}
+#logo {
+    max-height: 100px;
+}
+/* Apply Futura font */
+body {
+    font-family: 'Futura', sans-serif;
+    background-color: #ecf4f8;
+}
+/* Navbar Styling */
+.custom-navbar {
+    background-color: #e2bdcb; /* Navbar background color */
+    font-family: 'Didot', serif; 
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+    color: black; /* Black text color for navbar links */
+    font-weight: normal; /* Normal font weight */
+    transition: color 0.3s ease, background-color 0.3s ease, font-style 0.3s ease;
+}
+
+/* Hover Effect for Navbar Links */
+.navbar .nav-link:hover {
+    color: whitesmoke; /* Change color on hover to match card link */
+    background-color: rgba(226, 189, 203, 0.2); /* Subtle background change on hover */
+    font-style: italic;
+}
+
+/* Card styling */
+.custom-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f8f9fa; /* Neutral background color */
+}
+/* Ensure the cards are square */
+.custom-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f5eff1; /* Neutral background color */
+    width: 100%; /* Ensures full width inside the grid */
+    height: 0;
+    padding-bottom: 100%; /* This creates the square aspect ratio */
+}
+
+/* Card Styling Updates */
+.custom-card .card-body {
+    position: absolute; /* Keep text centered */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Center-align text */
+    width: 90%; /* Ensure text doesn't overflow */
+    padding: 10px; /* Add consistent padding */
+    font-family: 'Didot', serif; /* Apply Didot font */
+    font-size: 1rem; /* Consistent font size */
+    color: #474a4d; /* Neutral grey color */
+    font-weight: 400; /* Regular weight for better readability */
+}
+
+/* Background image setup */
+.custom-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: var(--card-bg); /* Dynamically set background image */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+/* Reveal background on hover */
+.custom-card:hover::before {
+    opacity: 0.25; /* Low opacity for subtle effect */
+}
+
+/* Hover animations for the card */
+.custom-card:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Card Text Styling */
+.card-title {
+    margin-bottom: 10px; /* Ensure spacing between title and text */
+    font-weight: 600; /* Slightly heavier for titles */
+}
+
+.card-text {
+    margin: 0; /* Remove extra spacing */
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Remove link styling from the card text */
+.card-link {
+    text-decoration: none; /* Remove underline from the entire card */
+    color: #474a4d; /* Set card link color to #e2bdcb */
+    transition: color 0.3s ease;
+}
+/* Card Link Hover Effect */
+.card-link:hover {
+    color: #782544; /* Change link color to black when hovering */
+}
+
+.card-body .card-title,
+.card-body .card-text {
+    color: inherit; /* Ensure text color is not affected by link styles */
+}
+
+/* Optional: Add some hover effects for the entire card */
+.custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+}
+
+.custom-card:hover .card-body {
+    background-color: rgba(0, 86, 179, 0.1); /* Light background change on hover */
+}
+
+/* Ensure all carousel images are the same size */
+#homepageCarousel .carousel-inner img {
+    width: 100%;  /* Make the image take up the full width of the container */
+    height: 500px;  /* Set a fixed height for all images */
+    object-fit: cover;  /* Crop the image if necessary to fit the container without distortion */
+}
+#homepageCarousel img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Refined Carousel Caption Styling */
+.carousel-caption {
+    position: absolute;
+    bottom: 10%; /* Position at the bottom for visibility */
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Futura PT', sans-serif; /* Use Futura font */
+    color: #f8f9fa; /* Light off-white for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for readability */
+    font-size: calc(1.8rem + 0.5vw); /* Larger font size for better visibility */
+    font-weight: 900; /* Use bold weight */
+    text-transform: lowercase;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .carousel-caption {
+        bottom: 5%; /* Adjust position for smaller screens */
+        font-size: calc(1.2rem + 0.5vw); /* Slightly smaller font size for mobile */
+        padding: 5px;
+    }
+}
+
+
+
+/*didot fonts*/
+@font-face {
+    font-family: 'Didot', serif;
+    src: url('../fonts/Didot.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Didot', serif;
+    src: url('../fonts/Didot Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Didot', serif;
+    src: url('../fonts/Didot Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/*futura fonts*/
+/* Futura Cyrillic - Book */
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaCyrillicBook.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Futura Cyrillic - Light */
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaCyrillicLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Futura Cyrillic - Medium */
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaCyrillicMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Futura Cyrillic - Demi */
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaCyrillicDemi.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Futura Cyrillic - Bold */
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaCyrillicBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Futura Cyrillic - Extra Bold */
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaCyrillicExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Futura Cyrillic - Heavy */
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaCyrillicHeavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* ting tong */
+@font-face {
+    font-family: 'Ting Tong';
+    src: url('../fonts/TingTong_Updated.ttf') format('truetype');
+}
+
+
+/* Enable hover effect for dropdown */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown on hover */
+    animation: fadeIn 0.3s ease-in-out; /* Optional: Add fade-in animation */
+}
+
+/* Optional: Add fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navbar and Dropdown Unified Styling */
+.navbar .nav-link,
+.dropdown-item {
+    color: #474a4d !important; /* Grey color for both navbar and dropdown */
+    font-family: 'Didot', serif; /* Same font family */
+    font-weight: normal; /* Same font weight */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect for Navbar Links and Dropdown Items */
+.navbar .nav-link:hover,
+.dropdown-item:hover {
+    color: whitesmoke !important; /* Change to whitesmoke on hover */
+    background-color: rgba(226, 189, 203, 0.2); /* Subtle hover background */
+}
+
+/* Dropdown-specific Background and Borders */
+.dropdown-menu {
+    background-color: #e2bdcb; /* Match navbar background color */
+    border: none; /* Remove border for cleaner look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Dropdown Item Styling */
+.dropdown-item {
+    color: #474a4d !important; /* Ensure grey color for dropdown text */
+    font-family: 'Didot', serif; /* Same font as navbar */
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+/* Styling the Table of Contents Box */
+.toc-box {
+    background-color: #e2bdcb; /* Pink color from the navbar */
+    padding: 15px;
+    border: 2px solid #c89bab; /* Slightly darker border for contrast */
+    border-radius: 10px; /* Rounded edges */
+    font-family: 'Didot', serif;
+    color: #474a4d; /* Slightly darker grey text */
+}
+
+/* Header for Table of Contents */
+.toc-box h5 {
+    font-size: 1.2rem; /* Slightly smaller font for the header */
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #212224;
+    text-align: left;
+}
+
+/* Table of Contents List Items */
+.toc-box ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 15px; /* Indent the list items */
+    margin: 0;
+}
+
+.toc-box li {
+    margin-bottom: 8px; /* Spacing between items */
+}
+
+.toc-box a {
+    text-decoration: none; /* Remove underline from links */
+    color: #474a4d; /* Same grey as the text */
+    font-size: 0.95rem; /* Slightly smaller font for the links */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Table of Contents Links */
+.toc-box a:hover {
+    color: whitesmoke; /* Change to lighter color on hover */
+    background-color: rgba(71, 74, 77, 0.1); /* Subtle background change on hover */
+    padding: 2px 5px; /* Add some padding for hover effect */
+    border-radius: 5px; /* Rounded effect on hover */
+}
+
+/* Page Content Styling */
+.col-md-9 {
+    font-family: 'Futura PT', sans-serif; /* Use Futura font for the main content */
+    color: #333; /* Neutral dark grey for readability */
+    line-height: 1.6; /* Improve readability */
+    font-weight:400;
+    font-style: normal;
+}
+
+/* Section Headers */
+.col-md-9 h2 {
+    font-size: 2rem; /* Larger font size for headers */
+    margin-top: 20px; /* Add space before each section */
+    margin-bottom: 10px; /* Add space after each section */
+    color: #474a4d; /* Slightly darker color */
+}
+
+/* Member Name Styling */
+h3.member-name {
+    font-size: 1.8rem; /* Larger font size for member names */
+    font-family: 'Ting Tong', cursive;
+}
+
+/* Subunit Link Styling */
+.subunit-link {
+    text-decoration: none; /* No underline */
+    color: #d4a3b5; /* Highlighted color for links */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.subunit-link:hover {
+    color: #474a4d; /* Slightly darker on hover */
+}
+
+
+/* Lighter Black for Labels */
+strong {
+    color: #4a4a4a;
+}
+
+/* Discography Album Covers */
+.img-fluid {
+    border-radius: 8px; /* Smooth corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle drop shadow */
+}
+
+p {
+    margin-top: 0.5rem;
+    font-size: 1rem; /* Slightly larger for readability */
+    font-family: 'Didot', serif;
+    color: #474a4d;
+}
+
+/* Album Title */
+.album-title {
+    font-family: 'Futura PT', serif; /* Elegant font */
+    font-size: 1.25rem; /* Larger size for emphasis */
+    font-weight: 500; /* Bold */
+    margin-bottom: 0.5rem; /* Space below title */
+}
+
+/* Release Date */
+.release-date {
+    font-family: 'Futura PT', serif; /* Match album title font */
+    font-size: 0.9rem; /* Subtle size for emphasis */
+    color: #474a4d; /* Neutral grey */
+    margin-bottom: 0.5rem; /* Space below release date */
+}
+
+/* Tracklist */
+.tracklist {
+    font-family: 'Didot', sans-serif; /* Clean modern font */
+    font-size: 0.9rem; /* Consistent size */
+    color: #474a4d; /* Neutral grey */
+    text-align: left; /* Align to the left for better readability */
+    margin: 0; /* Remove extra margin */
+    padding-left: 1rem; /* Indent the list */
+}
+
+.tracklist li {
+    
+
+/* Album Covers */
+img.img-fluid.rounded.shadow {
+    max-width: 100%; /* Ensure responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 1rem; /* Space below the image */
+    max-height: 200px; /* Slightly larger covers */
+    object-fit: cover; /* Crop if necessary */
+}
+
+/* Music Video Links */
+.video-links {
+    font-family: 'Futura', sans-serif; /* Match tracklist font */
+    font-size: 0.9rem; /* Consistent size with tracklist */
+    color: #782544; /* Subtle color */
+    text-align: left; /* Align to the left */
+    margin-top: 0.5rem; /* Space above video links */
+}
+
+.video-links a {
+    text-decoration: none; /* Remove underline */
+    color: #782544; /* Subtle color for links */
+    transition: color 0.3s ease;
+}
+
+.video-links a:hover {
+    color: #474a4d; /* Slightly darker color on hover */
+}
+
+}
+
+.container {
+    text-align: center; /* Center align all content inside the container */
+}
+/* Timeline Styling */
+.timeline {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 40px;
+    border-left: 8px solid transparent; /* Make border left visible */
+    border-image: linear-gradient(to bottom, 
+        #DE3373 , #FCCA28 , #08A953 , #F5712A , 
+        #F59EAF , #EE1B3E , #1E76B8 , #7C2E87 ,
+        #7A0434 , #F98F81 , #37BA9B , #C0C2C2 
+    ); /* 12-color gradient */
+    border-image-slice: 1; /* Ensure gradient fills the border */
+    display: inline-block; /* Makes the timeline content behave like an inline element for centering */
+    margin-top: 20px; /* Add some spacing below the h1 */
+}
+
+.timeline-event {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-color: #e2bdcb; /* Pink dots for events */
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.timeline-date {
+    font-family: 'Futura PT', sans-serif;
+    font-size: 1rem;
+    color: #474a4d; /* Grey color */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.timeline-content {
+    font-family: 'Didot', serif;
+    font-size: 1rem;
+    color: #474a4d; /* Neutral grey for readability */
+}
+
+.timeline-content h5 {
+    font-size: 1.5rem; /* Slightly larger for titles */
+    color: #000000; /* Adjust to a darker shade of pink */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #6c757d; /* Muted grey for descriptions */
+    line-height: 1.5; /* Improve readability */
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+h1.text-center {
+    font-family: 'Ting Tong', cursive;
+    font-size: 3rem; /* Adjust for visibility */
+    color: #000000; /* Dark pink color to match site palette */
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* Optional: Add spacing between letters */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-event::before {
+        left: -5px;
+        width: 12px;
+        height: 12px;
+    }
+}

@@ -1,0 +1,68 @@
+/* General Body Styles */
+body {
+    background-color: #ecf4f8;
+    font-family: 'Futura PT', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+h2 {
+    font-family: 'Ting Tong', cursive;
+    font-size: 2.2rem; /* Larger title size */
+    color: #782544;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    color: #333; /* Dark color for contrast */
+    text-align: left; /* Explicitly set alignment */
+    display: block; /* Force labels to take full width */
+    margin-bottom: 5px; /* Add spacing for clarity */
+}
+
+form .form-control {
+    text-align: left; /* Align text to the left */
+}
+
+form .btn-primary {
+    background-color: #782544;
+    border: none;
+}
+
+form .btn-primary:hover {
+    opacity: 0.9;
+}
+
+/* Search Bar */
+.text-end input {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+/* Contributions Section */
+#contributions {
+    background-color: #f9f9f9;
+    min-height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#contributions p {
+    
+    color: #6c757d;
+    font-size: 1rem;
+}
