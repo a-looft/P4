@@ -2,128 +2,118 @@
 <!-- DEVELOPER: Aida Looft, IS117-003, Fall 2024 -->
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Guide to the Loonaverse</title>
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous">
-        <link href="styles/main.css" rel="stylesheet">
-        <link href="styles/contributions_contact.css" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guide to the Loonaverse</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/contributions_contact.css" rel="stylesheet">
+</head>
 
-    <body>
-        <!-- Logo -->
-        <div class="text-center my-4">
-            <a href="index.html">
-                <img src="images/logo.png" alt="Site Logo" id="logo">
-            </a>
+<body>
+    <!-- Logo -->
+    <div class="text-center my-4">
+        <a href="index.html">
+            <img src="images/logo.png" alt="Site Logo" id="logo">
+        </a>
+    </div>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-md navbar-light custom-navbar">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="history.html">History</a>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown mx-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="profilesDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Profiles
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="profilesDropdown">
+                        <li><a class="dropdown-item" href="profiles.html#members">Members</a></li>
+                        <li><a class="dropdown-item" href="profiles.html#subunits">Sub-units</a></li>
+                        <li><a class="dropdown-item" href="profiles.html#redebuts">Re-debuts</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="timeline.html">Timeline</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="lore.html">Lore</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="contributions.html">Fan Contributions</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="map.html">Interactive Map</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
         </div>
-        
-        
-        <!-- Nav Bar --> <!--nav bar gets messed up in smaller viewport, need to fix-->
-        <nav class="navbar navbar-expand-md navbar-light custom-navbar">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="history.html">History</a>
-                    </li>
-                     <!-- Profiles Dropdown -->
-                    <li class="nav-item dropdown mx-2">
-                        <a class="nav-link dropdown-toggle" href="#" id="profilesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Profiles
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="profilesDropdown">
-                            <li><a class="dropdown-item" href="profiles.html#members">Members</a></li>
-                            <li><a class="dropdown-item" href="profiles.html#subunits">Sub-units</a></li>
-                            <li><a class="dropdown-item" href="profiles.html#redebuts">Re-debuts</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="timeline.html">Timeline</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="lore.html">Lore</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="contributions.html">Fan Contributions</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="map.html">Interactive Map</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    </nav>
 
-        <!-- Page Layout -->
-        <div class="container my-5">
+    <!-- Content -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Form -->
+            <div class="col-md-4 col-12">
+                <h2 class="mb-4">Fan Contributions</h2>
+                <form id="fan-contribution-form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Type here..." required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Contribution Title</label>
+                        <input type="text" id="title" class="form-control" placeholder="Type here..." required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="content" class="form-label">Contribution Content</label>
+                        <textarea id="content" class="form-control" rows="4" placeholder="Type here..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+                </form>
+            </div>
+
+            <!-- Contributions/Search -->
+            <div class="col-md-8 col-12">
+                <div class="mb-4">
+                    <input type="text" class="form-control" placeholder="Search contributions...">
+                </div>
+                <div id="contributions" class="border p-3 rounded">
+                    <p class="text-muted">No contributions yet. Be the first to submit!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer page-footer font-small">
+        <div class="container">
             <div class="row">
-                <!-- Left Section: Form -->
-                <div class="col-md-4">
-                    <h2 class="mb-4">Fan Contributions</h2>
-                    <form id="fan-contribution-form">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Type here..." required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="title" class="form-label">Contribution Title</label>
-                            <input type="text" id="title" class="form-control" placeholder="Type here..." required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="content" class="form-label">Contribution Content</label>
-                            <textarea id="content" class="form-control" rows="4" placeholder="Type here..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Submit</button>
-                    </form>
-                </div>
-
-                <!-- Right Section: Contributions and Search -->
-                <div class="col-md-8">
-                    <!-- Search Bar -->
-                    <div class="mb-4 text-end">
-                        <input type="text" class="form-control d-inline-block w-50" placeholder="Search contributions...">
-                    </div>
-
-                    <!-- Contributions Section -->
-                    <div id="contributions" class="border p-3 rounded">
-                        <!-- Dynamic contributions will be displayed here -->
-                        <p class="text-muted">No contributions yet. Be the first to submit!</p>
-                    </div>
-                </div>
+                <span class="text-muted">&copy; Aida Looft, 2024 | Terms Of Use | Privacy Statement</span>
             </div>
         </div>
+    </footer>
 
-        
+    <!-- JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
 
-        <!-- Footer -->
-        </div>
-        <footer class="footer page-footer font-small ">
-            <div class="container">
-                <div class="row">
-                    <span class="text-muted">&copy; Aida Looft, 2024 |  Terms Of Use  |  Privacy Statement</span>
-                </div>
-            </div>
-        </footer>
-        </div>
-            
-        <!-- Javascript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-                crossorigin="anonymous">
-        </script>
-        <script src="script.js"></script>
-    </body>
 </html>
