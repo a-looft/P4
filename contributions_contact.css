@@ -1,0 +1,71 @@
+/*DEVELOPER: Aida Looft, IS117-003, Fall 2024 */
+
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+h2 {
+    font-family: 'Ting Tong', cursive;
+    font-size: 2.2rem;
+    color: #782544;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+form .form-control {
+    text-align: left;
+}
+
+form .btn-primary {
+    background-color: #782544;
+    border: none;
+}
+
+form .btn-primary:hover {
+    opacity: 0.9;
+}
+
+.text-end input {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+#contributions {
+    background-color: #f9f9f9;
+    min-height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#contributions p {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+    #fan-contribution-form {
+        padding: 10px;
+    }
+
+    .col-md-4,
+    .col-md-8 {
+        margin-bottom: 15px;
+    }
+}

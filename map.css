@@ -1,0 +1,17 @@
+/*DEVELOPER: Aida Looft, IS117-003, Fall 2024 */
+
+#map {
+    height: 600px;
+    width: 100%;
+    border: 2px solid #c89bab;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-family: 'Ting Tong', cursive;
+    font-size: 2.5rem;
+    color: #782544;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}

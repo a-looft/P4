@@ -1,3 +1,5 @@
+//*DEVELOPER: Aida Looft, IS117-003, Fall 2024 */
+
 document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll('.custom-card');
     cards.forEach(card => {
