@@ -1,4 +1,3 @@
-/*Futura PT fonts*/
 @font-face {
     font-family: 'Futura PT', serif;
     src: url('../fonts/Futura PT.otf') format('opentype');
@@ -20,8 +19,6 @@
     font-style: italic;
 }
 
-/*futura fonts*/
-/* Futura Cyrillic - Book */
 @font-face {
     font-family: 'Futura PT';
     src: url('../fonts/FuturaCyrillicBook.ttf') format('truetype');
@@ -29,7 +26,6 @@
     font-style: normal;
 }
 
-/* Futura Cyrillic - Light */
 @font-face {
     font-family: 'Futura PT';
     src: url('../fonts/FuturaCyrillicLight.ttf') format('truetype');
@@ -37,7 +33,6 @@
     font-style: normal;
 }
 
-/* Futura Cyrillic - Medium */
 @font-face {
     font-family: 'Futura PT';
     src: url('../fonts/FuturaCyrillicMedium.ttf') format('truetype');
@@ -45,7 +40,6 @@
     font-style: normal;
 }
 
-/* Futura Cyrillic - Demi */
 @font-face {
     font-family: 'Futura PT';
     src: url('../fonts/FuturaCyrillicDemi.ttf') format('truetype');
@@ -53,7 +47,6 @@
     font-style: normal;
 }
 
-/* Futura Cyrillic - Bold */
 @font-face {
     font-family: 'Futura PT';
     src: url('../fonts/FuturaCyrillicBold.ttf') format('truetype');
@@ -61,7 +54,6 @@
     font-style: normal;
 }
 
-/* Futura Cyrillic - Extra Bold */
 @font-face {
     font-family: 'Futura PT';
     src: url('../fonts/FuturaCyrillicExtraBold.ttf') format('truetype');
@@ -69,7 +61,6 @@
     font-style: normal;
 }
 
-/* Futura Cyrillic - Heavy */
 @font-face {
     font-family: 'Futura PT';
     src: url('../fonts/FuturaCyrillicHeavy.ttf') format('truetype');
@@ -77,13 +68,11 @@
     font-style: normal;
 }
 
-/* ting tong */
 @font-face {
     font-family: 'Ting Tong';
     src: url('../fonts/TingTong_Updated.ttf') format('truetype');
 }
 
-/* Body Styles */
 body {
     font-family: 'Futura', sans-serif;
     background-color: #e2e2e2;
@@ -91,12 +80,10 @@ body {
     padding: 0;
 }
 
-/* Logo */
 #logo {
     max-height: 100px;
 }
 
-/* Footer */
 .footer {
     position: fixed;
     left: 0;
@@ -109,17 +96,15 @@ body {
     font-size: 0.5rem;
 }
 
-/* Navbar */
 .custom-navbar {
     background-color: #e2bdcb;
     font-family: 'Futura PT', serif;
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
-    display: block; /* Show dropdown on hover */
-    animation: fadeIn 0.3s ease-in-out; /* Optional: Add fade-in animation */
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
 }
-
 
 .navbar .nav-link {
     color: black;
@@ -133,12 +118,10 @@ body {
     font-style: italic;
 }
 
-/* Utilities */
 .container {
     text-align: center;
 }
 
-/* Shared Components */
 h1.text-center {
     font-family: 'Ting Tong', cursive;
     font-size: 3rem;
@@ -147,40 +130,30 @@ h1.text-center {
     letter-spacing: 2px;
 }
 
-/* Card styling */
 .custom-card {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #f8f9fa; /* Neutral background color */
-}
-/* Ensure the cards are square */
-.custom-card {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #f5eff1; /* Neutral background color */
-    width: 100%; /* Ensures full width inside the grid */
+    background-color: #f5eff1;
+    width: 100%;
     height: 0;
-    padding-bottom: 100%; /* This creates the square aspect ratio */
+    padding-bottom: 100%;
 }
 
-/* Card Styling Updates */
 .custom-card .card-body {
-    position: absolute; /* Keep text centered */
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center; /* Center-align text */
-    width: 90%; /* Ensure text doesn't overflow */
-    padding: 10px; /* Add consistent padding */
-    font-family: 'Futura PT', sans-serif; /* Apply Futura PT font */
-    font-size: 1rem; /* Consistent font size */
-    color: #474a4d; /* Neutral grey color */
-    font-weight: 400; /* Regular weight for better readability */
+    text-align: center;
+    width: 90%;
+    padding: 10px;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 1rem;
+    color: #474a4d;
+    font-weight: 400;
 }
 
-/* Background image setup */
 .custom-card::before {
     content: '';
     position: absolute;
@@ -190,89 +163,73 @@ h1.text-center {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-image: var(--card-bg); /* Dynamically set background image */
-    opacity: 0; /* Initially hidden */
+    background-image: var(--card-bg);
+    opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-/* Reveal background on hover */
 .custom-card:hover::before {
-    opacity: 0.25; /* Low opacity for subtle effect */
+    opacity: 0.25;
 }
 
-/* Hover animations for the card */
 .custom-card:hover {
-    transform: scale(1.05); /* Slight enlargement on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Card Text Styling */
 .card-title {
-    margin-bottom: 10px; /* Ensure spacing between title and text */
-    font-weight: 600; /* Slightly heavier for titles */
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .card-text {
-    margin: 0; /* Remove extra spacing */
-    line-height: 1.5; /* Improve readability */
+    margin: 0;
+    line-height: 1.5;
 }
 
-/* Remove link styling from the card text */
 .card-link {
-    text-decoration: none; /* Remove underline from the entire card */
-    color: #474a4d; /* Set card link color to #e2bdcb */
+    text-decoration: none;
+    color: #474a4d;
     transition: color 0.3s ease;
 }
-/* Card Link Hover Effect */
+
 .card-link:hover {
-    color: #782544; /* Change link color to black when hovering */
+    color: #782544;
 }
 
 .card-body .card-title,
 .card-body .card-text {
-    color: inherit; /* Ensure text color is not affected by link styles */
+    color: inherit;
 }
 
-/* Optional: Add some hover effects for the entire card */
-.custom-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow */
-}
-
-.custom-card:hover .card-body {
-    background-color: rgba(0, 86, 179, 0.1); /* Light background change on hover */
-}
-
-/* Ensure all carousel images are the same size */
 #homepageCarousel .carousel-inner img {
-    width: 100%;  /* Make the image take up the full width of the container */
-    height: 500px;  /* Set a fixed height for all images */
-    object-fit: cover;  /* Crop the image if necessary to fit the container without distortion */
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
 }
+
 #homepageCarousel img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
 }
 
-/* Refined Carousel Caption Styling */
 .carousel-caption {
     position: absolute;
-    bottom: 10%; /* Position at the bottom for visibility */
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'Futura PT', sans-serif; /* Use Futura font */
-    color: #f8f9fa; /* Light off-white for contrast */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for readability */
-    font-size: calc(1.8rem + 0.5vw); /* Larger font size for better visibility */
-    font-weight: 900; /* Use bold weight */
+    font-family: 'Futura PT', sans-serif;
+    color: #f8f9fa;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: calc(1.8rem + 0.5vw);
+    font-weight: 900;
     text-transform: lowercase;
 }
 
-/* Adjustments for smaller screens */
 @media (max-width: 768px) {
     .carousel-caption {
-        bottom: 5%; /* Adjust position for smaller screens */
-        font-size: calc(1.2rem + 0.5vw); /* Slightly smaller font size for mobile */
+        bottom: 5%;
+        font-size: calc(1.2rem + 0.5vw);
         padding: 5px;
     }
 }

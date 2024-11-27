@@ -1,20 +1,15 @@
-/* General Body Styles */
 body {
-    background-color: #ecf4f8;
-    font-family: 'Futura PT', sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: #f8f9fa;
+    color: #212529;
 }
 
-/* Header */
 h2 {
     font-family: 'Ting Tong', cursive;
-    font-size: 2.2rem; /* Larger title size */
+    font-size: 2.2rem;
     color: #782544;
     margin-bottom: 20px;
 }
 
-/* Form Styling */
 form {
     background-color: #fff;
     padding: 20px;
@@ -24,14 +19,12 @@ form {
 }
 
 form label {
-    color: #333; /* Dark color for contrast */
-    text-align: left; /* Explicitly set alignment */
-    display: block; /* Force labels to take full width */
-    margin-bottom: 5px; /* Add spacing for clarity */
+    color: #333;
+    margin-bottom: 5px;
 }
 
 form .form-control {
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
 form .btn-primary {
@@ -43,7 +36,6 @@ form .btn-primary:hover {
     opacity: 0.9;
 }
 
-/* Search Bar */
 .text-end input {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -51,7 +43,6 @@ form .btn-primary:hover {
     font-size: 1rem;
 }
 
-/* Contributions Section */
 #contributions {
     background-color: #f9f9f9;
     min-height: 200px;
@@ -62,7 +53,17 @@ form .btn-primary:hover {
 }
 
 #contributions p {
-    
     color: #6c757d;
     font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+    #fan-contribution-form {
+        padding: 10px;
+    }
+
+    .col-md-4,
+    .col-md-8 {
+        margin-bottom: 15px;
+    }
 }

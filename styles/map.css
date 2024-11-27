@@ -1,17 +1,15 @@
-/* Map Section */
 #map {
-    height: 600px; /* Full height for the map */
-    width: 100%; /* Full width of the container */
-    border: 2px solid #c89bab; /* Optional border styling */
-    border-radius: 10px; /* Rounded edges for styling */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    height: 600px;
+    width: 100%;
+    border: 2px solid #c89bab;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Page Title */
 h1 {
     font-family: 'Ting Tong', cursive;
     font-size: 2.5rem;
-    color: #782544; /* Match the site's color palette */
+    color: #782544;
     margin-bottom: 20px;
     letter-spacing: 2px;
 }

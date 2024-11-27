@@ -1,100 +1,104 @@
-/* General Layout for Member and Group Sections */
 .row.section-content {
     display: flex;
-    flex-wrap: wrap; /* Ensure responsive wrapping */
-    gap: 20px; /* Add spacing between items */
-    justify-content: start; /* Align content to the left */
-    margin-bottom: 40px; /* Add space between sections */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: start;
+    margin-bottom: 40px;
     align-items: flex-start;
 }
 
 .section-content .col-left {
-    flex: 0 0 35%; /* Fixed width for the image box */
+    flex: 0 0 35%;
     max-width: 35%;
-    background-color: #f8f9fa; /* Light background for the image box */
-    border-radius: 10px; /* Smooth corners */
-    padding: 15px; /* Add padding around content */
-    text-align: left; /* Center-align image and text */
-}
-
-.section-content .col-left img {
-    margin-bottom: 15px; /* Space below the image */
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
 }
 
 .section-content .col-right {
-    flex: 1; /* Remaining space for content */
+    flex: 1;
     max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
 }
 
-.section-content .col-right .row {
-    gap: 20px; /* Spacing between album cards */
-    justify-content: flex-start; /* Align album cards to the left */
+.section-content .album-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
-/* Responsive Adjustments for Small Screens */
+.section-content .album-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.section-content .album-card h5,
+.section-content .album-card p {
+    font-family: 'Futura PT', serif;
+    font-size: 1rem;
+    color: #474a4d;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.section-content .album-card .album-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 @media (max-width: 768px) {
     .row.section-content {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
+        flex-direction: column;
     }
 
-    .section-content .col-left,
-    .section-content .col-right {
-        flex: 0 0 100%; /* Full-width columns */
+    .section-content .col-left {
+        flex: 0 0 100%;
         max-width: 100%;
-        text-align: center; /* Center-align content */
-        margin-bottom: 20px; /* Add spacing between stacked items */
+        margin-bottom: 20px;
     }
 
-    .section-content .col-right .row {
-        justify-content: center; /* Center album cards for small screens */
+    .section-content .col-right {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
-    .album-card img {
-        max-height: 150px; /* Smaller covers for mobile screens */
+
+    .section-content .album-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-content .album-card img {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
     }
 }
 
-/* Album Card Styles */
-.album-card {
-    flex: 1 1 calc(33.333% - 20px); /* Three albums per row with gap */
-    max-width: calc(33.333% - 20px);
-    text-align: center; /* Center-align album content */
-    margin-bottom: 20px;
-}
-
-.album-card img {
-    width: 100%; /* Ensure image fills card */
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 8px; /* Smooth corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.album-card h5 {
-    font-family: 'Futura PT', serif;
-    font-size: 1.25rem; /* Larger for album title */
-    margin-top: 10px;
-    color: #474a4d;
-}
-
-.album-card p {
-    font-family: 'Futura PT', serif;
-    font-size: 0.9rem;
-    color: #474a4d; /* Neutral grey */
-    margin: 5px 0;
-}
-
-/* Adjust Tracklist Alignment */
 .tracklist {
-    font-family: 'Futura PT', serif; /* Clean modern font */
+    font-family: 'Futura PT', serif;
     font-size: 0.9rem;
-    color: #474a4d; /* Neutral grey */
-    text-align: left; /* Align tracklist to the left */
-    margin: 0; /* Remove extra margin */
-    padding-left: 1rem; /* Indent the list */
+    color: #474a4d;
+    text-align: left;
+    margin: 0;
+    padding-left: 1rem;
 }
 
-/* Table of Contents Styling */
 .toc-box {
     background-color: #e2bdcb;
     padding: 15px;
@@ -102,12 +106,11 @@
     border-radius: 10px;
     font-family: 'Futura PT', serif;
     color: #474a4d;
-    text-align: left; /* Ensure text aligns to the left */
-    height: auto; /* Avoid stretching */
-    overflow: hidden; /* Prevent content overflow */
-    flex: 0 0 25%; /* Fixed width for ToC */
-    margin-right: 20px; /* Add space between ToC and content */
-    
+    text-align: left;
+    height: auto;
+    overflow: hidden;
+    flex: 0 0 25%;
+    margin-right: 20px;
 }
 
 .toc-box h5 {
@@ -122,7 +125,7 @@
 
 .toc-box a {
     text-decoration: none;
-    color: #474a4d; /* Updated color for subunit links */
+    color: #474a4d;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -133,54 +136,67 @@
     border-radius: 5px;
 }
 
-/* Content Area Styling */
 .content-area {
     font-family: 'Futura PT', sans-serif;
     color: #333;
     line-height: 1.6;
-    text-align: left; /* Ensure text aligns to the left */
-    margin: 0; /* Remove auto centering */
-    max-width: 100%; /* Allow full-width content */
-    width: calc(100% - 250px); /* Adjust width to account for ToC */
-    padding: 0 15px; /* Add spacing from ToC */
+    text-align: left;
+    margin: 0;
+    max-width: 100%;
+    width: calc(100% - 250px);
+    padding: 0 15px;
     flex: 1;
 }
 
-/* Heading Styles for Content Area */
 .content-area h2 {
-    font-family: 'Futura PT', sans-serif; /* Use Futura PT */
-    font-size: 2.5rem; /* Larger for top-level headings */
-    color: #782544; /* Match site color scheme */
-    margin-top: 30px; /* Add space above */
-    margin-bottom: 15px; /* Add space below */
-    border-bottom: 2px solid #e2bdcb; /* Add visual separation */
+    font-family: 'Futura PT', sans-serif;
+    font-size: 2.5rem;
+    color: #782544;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e2bdcb;
     padding-bottom: 5px;
     text-align: left;
 }
 
-/* Member Name Styling */
 .member-name {
-    font-size: 1.8rem; /* Larger font size for member names */
+    font-size: 1.8rem;
     font-family: 'Ting Tong', cursive;
-    text-align: center; /* Center-align the member name */
-    margin-bottom: 15px; /* Add space below the name */
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 
-/* Page Title Styling */
 .page-title {
     font-family: 'Ting Tong', cursive;
-    font-size: 3rem; /* Adjust size as needed */
-    color: #000000; /* Match the color theme */
+    font-size: 3rem;
+    color: #000000;
     text-align: left;
     margin-bottom: 10px;
     margin-left: 10px;
-    letter-spacing: 2px; /* Add spacing for better readability */
+    letter-spacing: 2px;
+}
+
+.member-info {
+    list-style: none;
+    padding: 0;
+}
+
+.member-info li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #474a4d;
 }
 
 .member-info li strong {
-    color:#333;
+    color: #333;
 }
 
 .member-info li a {
-    color:#c89bab;
+    color: #c89bab;
+    text-decoration: none;
+}
+
+.member-info li a:hover {
+    color: #782544;
 }

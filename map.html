@@ -26,7 +26,7 @@
         </a>
     </div>
 
-    <!-- Nav Bar --> <!--nav bar gets messed up in smaller viewport, need to fix-->
+    <!-- Nav Bar -->
     <nav class="navbar navbar-expand-md navbar-light custom-navbar">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
             <span class="navbar-toggler-icon"></span>
@@ -39,7 +39,7 @@
                 <li class="nav-item mx-2">
                     <a class="nav-link" href="history.html">History</a>
                 </li>
-                 <!-- Profiles Dropdown -->
+                 <!-- Dropdown -->
                 <li class="nav-item dropdown mx-2">
                     <a class="nav-link dropdown-toggle" href="#" id="profilesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Profiles
@@ -84,18 +84,53 @@
         </div>
     </footer>
 
-    <!-- Javascript for the Map -->
-    <script>
-        const map = L.map('map').setView([37.5665, 126.9780], 12); // Seoul, South Korea as initial view
+    <!-- javascript for map -->
+        <script>
+            const map = L.map('map').setView([20, 0], 2); // Centered globally
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-        }).addTo(map);
+            // function to add markers
+            function addMarker(latitude, longitude, title, description) {
+                L.marker([latitude, longitude]).addTo(map)
+                    .bindPopup(`<b>${title}</b><br>${description}`);
+            }
 
-        // Example marker MUST ADD MANY!
-        //L.marker([37.5665, 126.9780]).addTo(map)
-        //    .bindPopup("<b>Seoul, South Korea</b><br>The capital of LOONA's lore events.")
-        //    .openPopup();
-    </script>
-</body>
+            // filming lcoations
+            addMarker(37.5665, 126.9780, 'Seoul, South Korea', 'Multiple MVs including "Hi High" and "Butterfly" filmed here.');
+            addMarker(48.8566, 2.3522, 'Paris, France', 'HeeJin’s "ViVid" and “XIIIX” were filmed here.');
+            addMarker(35.6895, 139.6917, 'Tokyo, Japan', '"Around You" and "I’ll Be There" filmed here.');
+            addMarker(64.9631, -19.0208, 'Reykjavík, Iceland', 'Scenes from "Let Me In" and "XIIX" were filmed here.');
+            addMarker(51.5074, -0.1278, 'London, UK', '"The Carol" filmed here.');
+            addMarker(25.0330, 121.5654, 'Taipei, Taiwan', 'Featured in YeoJin album teasers.');
+            addMarker(22.3193, 114.1694, 'Hong Kong', '"Love & Live", "Everyday I Need You", and "XIVX" filmed here.');
+            addMarker(-36.8485, 174.7633, 'Auckland, New Zealand', 'Seen in  "Love & Live" and New Zealand Story');
+            addMarker(50.0755, 14.4378, 'Prague, Czech Republic', 'Featured in Love & Evil teasers.');
+            addMarker(34.0522, -118.2437, 'Los Angeles, USA', '"Girl Front" filmed here.');
+            addMarker(47.4979, 19.0402, 'Budapest, Hungary', 'Scenes from "love4eva" filmed here.');
+            addMarker(13.7563, 100.5018, 'Bangkok, Thailand', '"So What" filmed here.');
+
+            // LOONATHEWORLD tour stops
+            addMarker(34.0522, -118.2437, 'Los Angeles, USA', 'LOONATHEWORLD Tour started here on August 1, 2022.');
+            addMarker(37.7749, -122.4194, 'San Francisco, USA', 'Tour stop on August 4, 2022.');
+            addMarker(39.7392, -104.9903, 'Denver, USA', 'Tour stop on August 6, 2022.');
+            addMarker(39.0997, -94.5786, 'Kansas City, USA', 'Tour stop on August 8, 2022.');
+            addMarker(41.8781, -87.6298, 'Chicago, USA', 'Tour stop on August 11, 2022.');
+            addMarker(38.2527, -85.7585, 'Louisville, USA', 'Tour stop on August 13, 2022.');
+            addMarker(40.3356, -75.9269, 'Reading, USA', 'Tour stop on August 15, 2022.');
+            addMarker(38.9072, -77.0369, 'Washington D.C., USA', 'Tour stop on August 17, 2022.');
+            addMarker(40.7128, -74.0060, 'New York City, USA', 'Tour stop on August 19, 2022.');
+            addMarker(33.7490, -84.3880, 'Atlanta, USA', 'Additional tour stop on August 23, 2022.');
+            addMarker(32.7767, -96.7970, 'Dallas, USA', 'Additional tour stop on August 25, 2022.');
+            addMarker(29.7604, -95.3698, 'Houston, USA', 'Additional tour stop on August 26, 2022.');
+            addMarker(19.4326, -99.1332, 'Mexico City, Mexico', 'Additional tour stop on August 28, 2022.');
+            addMarker(52.2297, 21.0122, 'Warsaw, Poland', 'European tour started here on September 6, 2022.');
+            addMarker(52.3676, 4.9041, 'Amsterdam, Netherlands', 'Tour stop on September 8, 2022.');
+            addMarker(50.1109, 8.6821, 'Frankfurt, Germany', 'Tour stop on September 11, 2022.');
+            addMarker(48.8566, 2.3522, 'Paris, France', 'Tour stop on September 13, 2022.');
+            addMarker(51.5074, -0.1278, 'London, UK', 'Tour stop on September 16, 2022.');
+        </script>
+    </body>
 </html>
